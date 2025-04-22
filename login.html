@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录 - AI Model Material Center</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <img src="logo.svg" alt="AI Model Material Center">
+                <span>AI Model Material Center</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">首页</a>
+                <a href="models.html">模特库</a>
+                <a href="pricing.html">会员充值</a>
+                <a href="member.html">会员中心</a>
+                <a href="about.html">关于我们</a>
+                <a href="login.html" class="login-btn active">登录</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <h1>欢迎回来</h1>
+                <p>登录您的账号以继续访问</p>
+            </div>
+
+            <form class="login-form" id="loginForm" novalidate>
+                <div class="form-group">
+                    <label for="username">用户名</label>
+                    <div class="input-wrapper">
+                        <i class="ri-user-line"></i>
+                        <input 
+                            type="text" 
+                            id="username" 
+                            name="username" 
+                            placeholder="请输入用户名"
+                            minlength="6"
+                            maxlength="20"
+                            required
+                        >
+                    </div>
+                    <span class="error-message" id="usernameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">密码</label>
+                    <div class="input-wrapper">
+                        <i class="ri-lock-line"></i>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            placeholder="请输入密码"
+                            minlength="8"
+                            maxlength="20"
+                            required
+                        >
+                        <button type="button" class="toggle-password" aria-label="显示密码">
+                            <i class="ri-eye-off-line"></i>
+                        </button>
+                    </div>
+                    <span class="error-message" id="passwordError"></span>
+                </div>
+
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox" name="remember" id="remember">
+                        <span class="checkmark"></span>
+                        记住我
+                    </label>
+                    <a href="forgot-password.html" class="forgot-password">忘记密码？</a>
+                </div>
+
+                <button type="submit" class="login-button">
+                    <span>登录</span>
+                    <i class="ri-arrow-right-line"></i>
+                </button>
+
+                <div class="register-link">
+                    <p>还没有账号？<a href="register.html">立即注册</a></p>
+                </div>
+            </form>
+
+            <div class="social-login">
+                <p>其他登录方式</p>
+                <div class="social-buttons">
+                    <button class="social-button wechat" aria-label="使用微信登录">
+                        <i class="ri-wechat-line"></i>
+                    </button>
+                    <button class="social-button qq" aria-label="使用QQ登录">
+                        <i class="ri-qq-line"></i>
+                    </button>
+                    <button class="social-button weibo" aria-label="使用微博登录">
+                        <i class="ri-weibo-line"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p class="copyright">© 2024 AI模特素材中心. 保留所有权利</p>
+    </footer>
+
+    <script src="login.js"></script>
+</body>
+</html> 

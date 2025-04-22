@@ -1,0 +1,378 @@
+/* 注册页面容器 */
+.register-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(107, 70, 193, 0.1) 0%, rgba(159, 122, 234, 0.1) 100%);
+    padding-top: 6rem; /* 为固定导航栏留出空间 */
+}
+
+/* 注册卡片 */
+.register-card {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(26, 26, 26, 0.95);
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: fadeIn 0.5s ease;
+    margin-top: -4rem; /* 调整卡片位置，使其居中 */
+}
+
+/* 注册页面头部 */
+.register-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.register-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #FFFFFF 0%, var(--accent-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+.register-header p {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+/* 表单样式 */
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    color: var(--text-primary);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* 输入框容器 */
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper i {
+    position: absolute;
+    left: 1rem;
+    color: var(--text-secondary);
+    font-size: 1.25rem;
+    pointer-events: none;
+}
+
+/* 输入框样式 */
+.input-wrapper input {
+    width: 100%;
+    padding: 0.875rem 1rem 0.875rem 3rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.input-wrapper input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(159, 122, 234, 0.1);
+}
+
+.input-wrapper input::placeholder {
+    color: var(--text-secondary);
+}
+
+/* 密码显示切换按钮 */
+.toggle-password {
+    position: absolute;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 0;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+}
+
+.toggle-password:hover {
+    color: var(--accent-color);
+}
+
+/* 错误信息 */
+.error-message {
+    color: #ff4d4f;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    display: none;
+}
+
+.error-message.show {
+    display: block;
+}
+
+/* 协议同意选项 */
+.form-agreement {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-top: 0.5rem;
+}
+
+.agreement-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.agreement-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.checkmark {
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.checkmark::after {
+    content: '✓';
+    display: none;
+    color: var(--accent-color);
+    font-size: 12px;
+}
+
+.agreement-checkbox input[type="checkbox"]:checked + .checkmark {
+    border-color: var(--accent-color);
+    background: rgba(159, 122, 234, 0.1);
+}
+
+.agreement-checkbox input[type="checkbox"]:checked + .checkmark::after {
+    display: block;
+}
+
+.form-agreement a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.form-agreement a:hover {
+    color: var(--accent-color-light);
+}
+
+/* 注册按钮 */
+.register-button {
+    width: 100%;
+    padding: 1rem;
+    background: var(--accent-color);
+    border: none;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.register-button:hover {
+    background: var(--accent-color-dark);
+    transform: translateY(-2px);
+}
+
+.register-button i {
+    font-size: 1.25rem;
+    transition: transform 0.3s ease;
+}
+
+.register-button:hover i {
+    transform: translateX(4px);
+}
+
+/* 登录链接 */
+.login-link {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.login-link a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+    color: var(--accent-color-light);
+}
+
+/* 社交登录部分 */
+.social-register {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.social-register p {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.social-register p::before,
+.social-register p::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 25%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.social-register p::before {
+    left: 0;
+}
+
+.social-register p::after {
+    right: 0;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.social-button:hover {
+    transform: translateY(-2px);
+}
+
+.social-button.wechat:hover {
+    border-color: #07C160;
+    color: #07C160;
+}
+
+.social-button.qq:hover {
+    border-color: #12B7F5;
+    color: #12B7F5;
+}
+
+.social-button.weibo:hover {
+    border-color: #E6162D;
+    color: #E6162D;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 1rem;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--bg-secondary);
+        padding: 1rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .logo span {
+        font-size: 1.1rem;
+    }
+
+    .nav-links a {
+        width: 100%;
+        text-align: center;
+        padding: 0.75rem;
+    }
+
+    .nav-links .login-btn {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .register-container {
+        padding: 1rem;
+    }
+
+    .register-card {
+        padding: 1.5rem;
+    }
+
+    .register-header h1 {
+        font-size: 1.75rem;
+    }
+
+    .form-agreement {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+} 

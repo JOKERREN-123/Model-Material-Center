@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模特库 - AI Model Material Center</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="models.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <img src="logo.svg" alt="AI Model Material Center">
+                <span>AI Model Material Center</span>
+            </div>
+            <button class="mobile-menu-btn" aria-label="打开菜单">
+                <i class="ri-menu-line"></i>
+            </button>
+            <div class="nav-links">
+                <a href="index.html">首页</a>
+                <a href="models.html" class="active">模特库</a>
+                <a href="pricing.html">会员充值</a>
+                <a href="member.html">会员中心</a>
+                <a href="about.html">关于我们</a>
+                <a href="login.html" class="login-btn">登录</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="models-container">
+        <!-- 左侧筛选栏 -->
+        <aside class="filter-sidebar">
+            <div class="filter-group">
+                <h3>模特人种</h3>
+                <div class="filter-options">
+                    <label><input type="checkbox" name="race" value="asian"> 亚洲</label>
+                    <label><input type="checkbox" name="race" value="european"> 欧美</label>
+                    <label><input type="checkbox" name="race" value="african"> 非洲</label>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <h3>体型</h3>
+                <div class="filter-options">
+                    <label><input type="checkbox" name="body" value="slim"> 纤细</label>
+                    <label><input type="checkbox" name="body" value="normal"> 标准</label>
+                    <label><input type="checkbox" name="body" value="plus"> 丰满</label>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <h3>风格</h3>
+                <div class="filter-options">
+                    <label><input type="checkbox" name="style" value="fashion"> 时尚</label>
+                    <label><input type="checkbox" name="style" value="casual"> 休闲</label>
+                    <label><input type="checkbox" name="style" value="business"> 商务</label>
+                    <label><input type="checkbox" name="style" value="sports"> 运动</label>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <h3>服装季节</h3>
+                <div class="filter-options">
+                    <label><input type="checkbox" name="season" value="spring"> 春季</label>
+                    <label><input type="checkbox" name="season" value="summer"> 夏季</label>
+                    <label><input type="checkbox" name="season" value="autumn"> 秋季</label>
+                    <label><input type="checkbox" name="season" value="winter"> 冬季</label>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <h3>场景</h3>
+                <div class="filter-options">
+                    <label><input type="checkbox" name="scene" value="studio"> 棚拍</label>
+                    <label><input type="checkbox" name="scene" value="outdoor"> 外景</label>
+                    <label><input type="checkbox" name="scene" value="street"> 街拍</label>
+                </div>
+            </div>
+        </aside>
+
+        <!-- 中间图片展示区 -->
+        <section class="models-grid">
+            <div class="models-header">
+                <h2>模特展示</h2>
+                <div class="sort-options">
+                    <select>
+                        <option value="newest">最新上传</option>
+                        <option value="popular">最受欢迎</option>
+                        <option value="price-low">价格从低到高</option>
+                        <option value="price-high">价格从高到低</option>
+                    </select>
+                </div>
+            </div>
+            <div class="models-wrapper">
+                <!-- 模特卡片示例 -->
+                <div class="model-card">
+                    <div class="model-image">
+                        <img src="model1.jpg" alt="模特展示">
+                        <div class="model-actions">
+                            <button class="preview-btn"><i class="ri-zoom-in-line"></i></button>
+                            <button class="download-btn"><i class="ri-download-line"></i></button>
+                        </div>
+                    </div>
+                    <div class="model-info">
+                        <h4>模特编号：M2024001</h4>
+                        <div class="model-tags">
+                            <span>亚洲</span>
+                            <span>时尚</span>
+                            <span>夏季</span>
+                        </div>
+                        <div class="model-price">
+                            <span class="price">￥99</span>
+                            <span class="vip-price">VIP：￥49</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 更多模特卡片 -->
+            </div>
+            <div class="pagination">
+                <button class="prev-page">上一页</button>
+                <div class="page-numbers">
+                    <span class="active">1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>...</span>
+                    <span>10</span>
+                </div>
+                <button class="next-page">下一页</button>
+            </div>
+        </section>
+
+        <!-- 右侧推荐区 -->
+        <aside class="recommendation-sidebar">
+            <div class="sidebar-section">
+                <h3>热门推荐</h3>
+                <div class="hot-models">
+                    <div class="hot-model-item">
+                        <img src="hot-model1.jpg" alt="热门模特">
+                        <div class="hot-model-info">
+                            <h4>M2024002</h4>
+                            <span class="download-count">下载量：2.3k</span>
+                        </div>
+                    </div>
+                    <!-- 更多热门模特 -->
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>最新上传</h3>
+                <div class="new-models">
+                    <!-- 最新上传模特列表 -->
+                </div>
+            </div>
+
+            <div class="sidebar-section vip-section">
+                <h3>VIP专享</h3>
+                <div class="vip-models">
+                    <!-- VIP专享模特列表 -->
+                </div>
+                <button class="upgrade-vip-btn">升级VIP</button>
+            </div>
+        </aside>
+    </main>
+
+    <script src="models.js"></script>
+</body>
+</html> 

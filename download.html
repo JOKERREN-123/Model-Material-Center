@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>下载页面 - AI Model Material Center</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="download.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <img src="logo.svg" alt="AI Model Material Center">
+                <span>AI Model Material Center</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">首页</a>
+                <a href="models.html">模特库</a>
+                <a href="pricing.html">会员充值</a>
+                <a href="member.html">会员中心</a>
+                <a href="about.html">关于我们</a>
+                <a href="login.html" class="login-btn">登录</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="download-container">
+        <!-- 左侧图片预览区 -->
+        <section class="preview-section">
+            <div class="main-preview">
+                <img src="model1.jpg" alt="模特预览" id="mainPreview">
+                <div class="preview-controls">
+                    <button class="zoom-btn"><i class="ri-zoom-in-line"></i></button>
+                    <button class="rotate-btn"><i class="ri-refresh-line"></i></button>
+                </div>
+            </div>
+            <div class="thumbnail-list">
+                <div class="thumbnail active">
+                    <img src="model1.jpg" alt="缩略图1">
+                </div>
+                <div class="thumbnail">
+                    <img src="model1-2.jpg" alt="缩略图2">
+                </div>
+                <div class="thumbnail">
+                    <img src="model1-3.jpg" alt="缩略图3">
+                </div>
+            </div>
+        </section>
+
+        <!-- 右侧信息和操作区 -->
+        <section class="info-section">
+            <div class="model-details">
+                <h1>模特编号：M2024001</h1>
+                <div class="model-tags">
+                    <span class="tag">亚洲</span>
+                    <span class="tag">时尚</span>
+                    <span class="tag">夏季</span>
+                    <span class="tag">棚拍</span>
+                </div>
+                <div class="model-description">
+                    <h3>图片信息</h3>
+                    <ul>
+                        <li>分辨率：4K（3840×2160）</li>
+                        <li>格式：JPG</li>
+                        <li>拍摄场景：专业摄影棚</li>
+                        <li>上传时间：2024-03-20</li>
+                        <li>下载次数：1.2k</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="download-options">
+                <h3>下载选项</h3>
+                <div class="option-cards">
+                    <div class="option-card active">
+                        <div class="option-header">
+                            <h4>单张下载</h4>
+                            <div class="price-info">
+                                <span class="original-price">￥99</span>
+                                <span class="vip-price">VIP：￥49</span>
+                            </div>
+                        </div>
+                        <p>下载单张高清原图</p>
+                    </div>
+                    <div class="option-card">
+                        <div class="option-header">
+                            <h4>组合下载</h4>
+                            <div class="price-info">
+                                <span class="original-price">￥259</span>
+                                <span class="vip-price">VIP：￥129</span>
+                            </div>
+                        </div>
+                        <p>下载该模特全部3张图片</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="add-cart-btn"><i class="ri-shopping-cart-line"></i> 加入购物车</button>
+                <button class="buy-now-btn"><i class="ri-download-line"></i> 立即下载</button>
+            </div>
+        </section>
+
+        <!-- 购物车侧边栏 -->
+        <aside class="cart-sidebar" id="cartSidebar">
+            <div class="cart-header">
+                <h3><i class="ri-shopping-cart-2-line"></i> 购物车</h3>
+                <button class="close-cart"><i class="ri-close-line"></i></button>
+            </div>
+            <div class="cart-items">
+                <!-- 购物车项目示例 -->
+                <div class="cart-item">
+                    <img src="model1-thumb.jpg" alt="购物车缩略图">
+                    <div class="item-info">
+                        <h4>M2024001</h4>
+                        <p>单张下载</p>
+                    </div>
+                    <div class="item-price">￥99</div>
+                    <button class="remove-item"><i class="ri-delete-bin-line"></i></button>
+                </div>
+            </div>
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>原价总计</span>
+                    <span>￥99</span>
+                </div>
+                <div class="summary-row">
+                    <span>会员折扣</span>
+                    <span class="discount">-￥50</span>
+                </div>
+                <div class="summary-row total">
+                    <span>应付金额</span>
+                    <span>￥49</span>
+                </div>
+            </div>
+            <div class="cart-actions">
+                <button class="checkout-btn">去结算</button>
+                <button class="continue-shopping">继续购物</button>
+            </div>
+        </aside>
+    </main>
+
+    <!-- 会员提示模态框 -->
+    <div class="modal" id="membershipModal">
+        <div class="modal-content">
+            <h2>开通会员享受优惠</h2>
+            <p>成为会员即可享受5折优惠，还有更多专属特权！</p>
+            <div class="modal-buttons">
+                <button class="upgrade-btn">立即开通</button>
+                <button class="cancel-btn">暂不开通</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="download.js"></script>
+</body>
+</html> 

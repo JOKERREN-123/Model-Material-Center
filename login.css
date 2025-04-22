@@ -1,0 +1,328 @@
+/* 登录页面样式 */
+.login-container {
+    min-height: calc(100vh - 140px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(107, 70, 193, 0.1) 0%, rgba(159, 122, 234, 0.1) 100%);
+}
+
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.login-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #ffffff 0%, var(--accent-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.login-header p {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    color: var(--text-primary);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper i {
+    position: absolute;
+    left: 1rem;
+    color: var(--text-secondary);
+    font-size: 1.25rem;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 0.875rem 1rem 0.875rem 3rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.input-wrapper input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(159, 122, 234, 0.1);
+}
+
+.input-wrapper input::placeholder {
+    color: var(--text-secondary);
+}
+
+.toggle-password {
+    position: absolute;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 0;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+}
+
+.toggle-password:hover {
+    color: var(--accent-color);
+}
+
+.error-message {
+    color: #ff4d4f;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    display: none;
+}
+
+.error-message.show {
+    display: block;
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    cursor: pointer;
+}
+
+.remember-me input[type="checkbox"] {
+    display: none;
+}
+
+.checkmark {
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.checkmark::after {
+    content: '\2714';
+    display: none;
+    color: var(--accent-color);
+    font-size: 12px;
+}
+
+.remember-me input[type="checkbox"]:checked + .checkmark {
+    border-color: var(--accent-color);
+    background: rgba(159, 122, 234, 0.1);
+}
+
+.remember-me input[type="checkbox"]:checked + .checkmark::after {
+    display: block;
+}
+
+.forgot-password {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+    color: var(--accent-color);
+}
+
+.login-button {
+    width: 100%;
+    padding: 1rem;
+    background: var(--accent-color);
+    border: none;
+    border-radius: 8px;
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.login-button:hover {
+    background: var(--accent-color-dark);
+    transform: translateY(-2px);
+}
+
+.login-button i {
+    font-size: 1.25rem;
+    transition: transform 0.3s ease;
+}
+
+.login-button:hover i {
+    transform: translateX(4px);
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.register-link a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.register-link a:hover {
+    color: var(--accent-color-light);
+}
+
+.social-login {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.social-login p {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.social-login p::before,
+.social-login p::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 25%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.social-login p::before {
+    left: 0;
+}
+
+.social-login p::after {
+    right: 0;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.social-button:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+.social-button.wechat:hover {
+    border-color: #07C160;
+    color: #07C160;
+}
+
+.social-button.qq:hover {
+    border-color: #12B7F5;
+    color: #12B7F5;
+}
+
+.social-button.weibo:hover {
+    border-color: #E6162D;
+    color: #E6162D;
+}
+
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 1rem;
+    }
+
+    .login-card {
+        padding: 1.5rem;
+    }
+
+    .login-header h1 {
+        font-size: 1.75rem;
+    }
+
+    .form-options {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+} 

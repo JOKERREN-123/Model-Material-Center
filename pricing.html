@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会员充值 - AI Model Material Center</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pricing.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <img src="logo.svg" alt="AI Model Material Center">
+                <span>AI Model Material Center</span>
+            </div>
+            <button class="mobile-menu-btn" aria-label="打开菜单">
+                <i class="ri-menu-line"></i>
+            </button>
+            <div class="nav-links">
+                <a href="index.html">首页</a>
+                <a href="models.html">模特库</a>
+                <a href="pricing.html" class="active">会员充值</a>
+                <a href="member.html">会员中心</a>
+                <a href="about.html">关于我们</a>
+                <a href="login.html" class="login-btn">登录</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pricing-container">
+        <!-- 会员权益介绍 -->
+        <section class="benefits-section">
+            <h1>VIP会员权益</h1>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="ri-percent-line"></i>
+                    <h3>超值折扣</h3>
+                    <p>所有素材享受5折优惠，部分特惠素材低至3折</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="ri-download-cloud-line"></i>
+                    <h3>无限下载</h3>
+                    <p>每日可下载素材数量翻倍，无需等待限制</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="ri-vip-crown-line"></i>
+                    <h3>优先下载</h3>
+                    <p>新素材优先体验，高速通道专享下载</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="ri-customer-service-line"></i>
+                    <h3>专属客服</h3>
+                    <p>一对一专属客服支持，快速解决您的问题</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 充值套餐 -->
+        <section class="plans-section">
+            <h2>选择您的会员套餐</h2>
+            <div class="plans-grid">
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>月度会员</h3>
+                        <div class="price">
+                            <span class="amount">￥99</span>
+                            <span class="period">/月</span>
+                        </div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="ri-check-line"></i>每日下载量翻倍</li>
+                        <li><i class="ri-check-line"></i>素材5折优惠</li>
+                        <li><i class="ri-check-line"></i>优先下载通道</li>
+                        <li><i class="ri-check-line"></i>在线客服支持</li>
+                    </ul>
+                    <button class="select-plan-btn">立即开通</button>
+                </div>
+
+                <div class="plan-card popular">
+                    <div class="popular-tag">最受欢迎</div>
+                    <div class="plan-header">
+                        <h3>季度会员</h3>
+                        <div class="price">
+                            <span class="amount">￥269</span>
+                            <span class="period">/季</span>
+                        </div>
+                        <div class="saving">比月付节省￥28</div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="ri-check-line"></i>每日下载量3倍</li>
+                        <li><i class="ri-check-line"></i>素材4折优惠</li>
+                        <li><i class="ri-check-line"></i>优先下载通道</li>
+                        <li><i class="ri-check-line"></i>专属客服支持</li>
+                        <li><i class="ri-check-line"></i>素材收藏夹</li>
+                    </ul>
+                    <button class="select-plan-btn">立即开通</button>
+                </div>
+
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>年度会员</h3>
+                        <div class="price">
+                            <span class="amount">￥999</span>
+                            <span class="period">/年</span>
+                        </div>
+                        <div class="saving">比月付节省￥189</div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="ri-check-line"></i>无限下载次数</li>
+                        <li><i class="ri-check-line"></i>素材3折优惠</li>
+                        <li><i class="ri-check-line"></i>最高优先下载</li>
+                        <li><i class="ri-check-line"></i>24h专属客服</li>
+                        <li><i class="ri-check-line"></i>高级收藏夹</li>
+                        <li><i class="ri-check-line"></i>API接口授权</li>
+                    </ul>
+                    <button class="select-plan-btn">立即开通</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 支付方式 -->
+        <section class="payment-section">
+            <h2>选择支付方式</h2>
+            <div class="payment-methods">
+                <label class="payment-method">
+                    <input type="radio" name="payment" value="wechat">
+                    <div class="method-content">
+                        <i class="ri-wechat-pay-line"></i>
+                        <span>微信支付</span>
+                    </div>
+                </label>
+                <label class="payment-method">
+                    <input type="radio" name="payment" value="alipay">
+                    <div class="method-content">
+                        <i class="ri-alipay-line"></i>
+                        <span>支付宝</span>
+                    </div>
+                </label>
+                <label class="payment-method">
+                    <input type="radio" name="payment" value="creditcard">
+                    <div class="method-content">
+                        <i class="ri-bank-card-line"></i>
+                        <span>信用卡</span>
+                    </div>
+                </label>
+                <label class="payment-method">
+                    <input type="radio" name="payment" value="paypal">
+                    <div class="method-content">
+                        <i class="ri-paypal-line"></i>
+                        <span>PayPal</span>
+                    </div>
+                </label>
+            </div>
+            <button class="confirm-payment-btn" disabled>确认支付</button>
+        </section>
+    </main>
+
+    <div class="payment-success-modal">
+        <div class="modal-content">
+            <i class="ri-checkbox-circle-line success-icon"></i>
+            <h3>支付成功！</h3>
+            <p>您的会员已经开通，立即开始享受会员权益吧！</p>
+            <button class="goto-member-btn">前往会员中心</button>
+        </div>
+    </div>
+
+    <script src="pricing.js"></script>
+</body>
+</html> 

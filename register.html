@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册 - AI Model Material Center</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="register.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.svg" alt="AI Model Material Center">
+                <span>AI Model Material Center</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">首页</a>
+                <a href="models.html">模特库</a>
+                <a href="pricing.html">会员充值</a>
+                <a href="member.html">会员中心</a>
+                <a href="about.html">关于我们</a>
+                <a href="login.html" class="login-btn">登录</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="打开菜单">
+                <i class="ri-menu-line"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main class="register-container">
+        <div class="register-card">
+            <div class="register-header">
+                <h1>创建账号</h1>
+                <p>加入我们，开启AI模特之旅</p>
+            </div>
+
+            <form class="register-form" id="registerForm" novalidate>
+                <div class="form-group">
+                    <label for="username">用户名</label>
+                    <div class="input-wrapper">
+                        <i class="ri-user-line"></i>
+                        <input 
+                            type="text" 
+                            id="username" 
+                            name="username" 
+                            placeholder="请输入6-20位用户名"
+                            minlength="6"
+                            maxlength="20"
+                            required
+                        >
+                    </div>
+                    <span class="error-message" id="usernameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">电子邮箱</label>
+                    <div class="input-wrapper">
+                        <i class="ri-mail-line"></i>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="请输入有效的电子邮箱"
+                            required
+                        >
+                    </div>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">密码</label>
+                    <div class="input-wrapper">
+                        <i class="ri-lock-line"></i>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            placeholder="请输入8-20位密码"
+                            minlength="8"
+                            maxlength="20"
+                            required
+                        >
+                        <button type="button" class="toggle-password" aria-label="显示密码">
+                            <i class="ri-eye-off-line"></i>
+                        </button>
+                    </div>
+                    <span class="error-message" id="passwordError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">确认密码</label>
+                    <div class="input-wrapper">
+                        <i class="ri-lock-line"></i>
+                        <input 
+                            type="password" 
+                            id="confirmPassword" 
+                            name="confirmPassword" 
+                            placeholder="请再次输入密码"
+                            required
+                        >
+                        <button type="button" class="toggle-password" aria-label="显示密码">
+                            <i class="ri-eye-off-line"></i>
+                        </button>
+                    </div>
+                    <span class="error-message" id="confirmPasswordError"></span>
+                </div>
+
+                <div class="form-agreement">
+                    <label class="agreement-checkbox">
+                        <input type="checkbox" name="agreement" id="agreement" required>
+                        <span class="checkmark"></span>
+                        我已阅读并同意
+                    </label>
+                    <a href="terms.html" target="_blank">用户协议</a>
+                    和
+                    <a href="privacy.html" target="_blank">隐私政策</a>
+                </div>
+
+                <button type="submit" class="register-button">
+                    <span>立即注册</span>
+                    <i class="ri-arrow-right-line"></i>
+                </button>
+
+                <div class="login-link">
+                    <p>已有账号？<a href="login.html">立即登录</a></p>
+                </div>
+            </form>
+
+            <div class="social-register">
+                <p>其他注册方式</p>
+                <div class="social-buttons">
+                    <button class="social-button wechat" aria-label="使用微信注册">
+                        <i class="ri-wechat-line"></i>
+                    </button>
+                    <button class="social-button qq" aria-label="使用QQ注册">
+                        <i class="ri-qq-line"></i>
+                    </button>
+                    <button class="social-button weibo" aria-label="使用微博注册">
+                        <i class="ri-weibo-line"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p class="copyright">© 2024 AI模特素材中心. 保留所有权利</p>
+    </footer>
+
+    <script src="register.js"></script>
+</body>
+</html> 

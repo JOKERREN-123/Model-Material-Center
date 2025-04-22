@@ -1,0 +1,510 @@
+/* 全局样式 */
+:root {
+    --gradient-primary: linear-gradient(135deg, #6B46C1 0%, #9F7AEA 100%);
+    --gradient-hover: linear-gradient(135deg, #553C9A 0%, #805AD5 100%);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.pricing-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: linear-gradient(180deg, rgba(107, 70, 193, 0.05) 0%, rgba(159, 122, 234, 0.05) 100%);
+    min-height: calc(100vh - 80px);
+}
+
+/* 会员权益部分 */
+.benefits-section {
+    text-align: center;
+    margin-bottom: 6rem;
+    padding: 2rem;
+}
+
+.benefits-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    display: inline-block;
+}
+
+.benefits-section h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.benefit-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(159, 122, 234, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.benefit-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-primary);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(159, 122, 234, 0.3);
+}
+
+.benefit-card:hover::before {
+    opacity: 0.05;
+}
+
+.benefit-card i {
+    font-size: 3rem;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.benefit-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.benefit-card p {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+}
+
+/* 套餐选择部分 */
+.plans-section {
+    margin-bottom: 6rem;
+    padding: 0 2rem;
+}
+
+.plans-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 4rem;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.plans-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 3px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+}
+
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.plan-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 24px;
+    padding: 3rem 2rem;
+    position: relative;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(159, 122, 234, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.plan-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--gradient-primary);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.plan-card:hover::before {
+    opacity: 1;
+}
+
+.plan-card.popular {
+    transform: scale(1.05);
+    border: 2px solid rgba(159, 122, 234, 0.3);
+    background: rgba(107, 70, 193, 0.1);
+}
+
+.popular-tag {
+    position: absolute;
+    top: 1rem;
+    right: -2rem;
+    background: var(--gradient-primary);
+    color: white;
+    padding: 0.5rem 3rem;
+    transform: rotate(45deg);
+    font-size: 0.875rem;
+    font-weight: 600;
+    box-shadow: var(--shadow-lg);
+}
+
+.plan-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.plan-header h3 {
+    font-size: 1.75rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+.price {
+    margin-bottom: 1rem;
+}
+
+.price .amount {
+    font-size: 3.5rem;
+    font-weight: 700;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.price .period {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.saving {
+    font-size: 0.875rem;
+    color: #48BB78;
+    background: rgba(72, 187, 120, 0.1);
+    padding: 0.25rem 1rem;
+    border-radius: 12px;
+    display: inline-block;
+}
+
+.plan-features {
+    list-style: none;
+    margin: 2rem 0;
+    padding: 0;
+    flex: 1;
+}
+
+.plan-features li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+}
+
+.plan-features i {
+    color: #9F7AEA;
+    margin-right: 0.75rem;
+    font-size: 1.25rem;
+}
+
+.select-plan-btn {
+    width: 100%;
+    padding: 1rem;
+    background: transparent;
+    border: 2px solid #9F7AEA;
+    color: #9F7AEA;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    margin-top: auto;
+}
+
+.select-plan-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-primary);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.select-plan-btn:hover {
+    color: white;
+    border-color: transparent;
+}
+
+.select-plan-btn:hover::before {
+    opacity: 1;
+}
+
+/* 支付方式部分 */
+.payment-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 24px;
+    border: 1px solid rgba(159, 122, 234, 0.1);
+}
+
+.payment-section h2 {
+    text-align: center;
+    font-size: 1.75rem;
+    margin-bottom: 3rem;
+    color: #fff;
+}
+
+.payment-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.payment-method {
+    cursor: pointer;
+}
+
+.payment-method input[type="radio"] {
+    display: none;
+}
+
+.method-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    border: 1px solid rgba(159, 122, 234, 0.1);
+    transition: all 0.3s ease;
+}
+
+.payment-method input[type="radio"]:checked + .method-content {
+    background: rgba(159, 122, 234, 0.1);
+    border-color: #9F7AEA;
+    transform: translateY(-5px);
+}
+
+.method-content i {
+    font-size: 2.5rem;
+    color: #9F7AEA;
+    margin-bottom: 1rem;
+}
+
+.method-content span {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+}
+
+.confirm-payment-btn {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: block;
+    padding: 1.25rem;
+    background: var(--gradient-primary);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.confirm-payment-btn:disabled {
+    background: rgba(159, 122, 234, 0.3);
+    cursor: not-allowed;
+}
+
+.confirm-payment-btn:not(:disabled):hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-xl);
+}
+
+/* 支付成功弹窗 */
+.payment-success-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.payment-success-modal.show {
+    display: flex;
+    animation: modalFadeIn 0.3s ease;
+}
+
+.modal-content {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 4rem 3rem;
+    border-radius: 24px;
+    text-align: center;
+    border: 1px solid rgba(159, 122, 234, 0.2);
+    backdrop-filter: blur(16px);
+    max-width: 90%;
+    width: 500px;
+}
+
+.success-icon {
+    font-size: 5rem;
+    color: #48BB78;
+    margin-bottom: 1.5rem;
+}
+
+.modal-content h3 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.modal-content p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2rem;
+    font-size: 1.125rem;
+}
+
+.goto-member-btn {
+    padding: 1rem 2.5rem;
+    background: var(--gradient-primary);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.goto-member-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-xl);
+    background: var(--gradient-hover);
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .pricing-container {
+        padding: 20px 16px;
+    }
+
+    .benefits-section {
+        padding: 1rem;
+    }
+
+    .benefits-section h1 {
+        font-size: 2rem;
+    }
+
+    .plans-section {
+        padding: 0 1rem;
+    }
+
+    .plan-card.popular {
+        transform: scale(1);
+    }
+
+    .payment-section {
+        padding: 2rem 1rem;
+    }
+
+    .payment-methods {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .modal-content {
+        padding: 2rem;
+        margin: 1rem;
+    }
+}
+
+/* 动画效果 */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.benefit-card i {
+    animation: float 3s ease-in-out infinite;
+} 

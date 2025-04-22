@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我们 - AI Model Material Center</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/qrcode.js@1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.svg" alt="AI Model Material Center">
+                <span>AI Model Material Center</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">首页</a>
+                <a href="models.html">模特库</a>
+                <a href="pricing.html">会员充值</a>
+                <a href="member.html">会员中心</a>
+                <a href="about.html" class="active">关于我们</a>
+                <a href="login.html" class="login-btn">登录</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="打开菜单">
+                <i class="ri-menu-line"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main class="about-container">
+        <!-- 页面标题部分 -->
+        <section class="about-header">
+            <h1>关于我们</h1>
+            <p>了解我们的使命与愿景</p>
+        </section>
+
+        <!-- 公司简介部分 -->
+        <section class="company-intro">
+            <div class="intro-content">
+                <h2>公司简介</h2>
+                <p>AI Model Material Center 是一家专注于AI模特素材领域的创新型科技公司。我们致力于为创作者提供高质量的AI模特素材，推动数字创意产业的发展。</p>
+                <p>我们的愿景是成为全球领先的AI模特素材提供平台，通过技术创新和优质服务，为用户提供更便捷、更专业的创作体验。</p>
+            </div>
+            <div class="intro-image">
+                <img src="company.jpg" alt="公司形象" class="company-img">
+            </div>
+        </section>
+
+        <!-- 联系方式部分 -->
+        <section class="contact-info">
+            <h2>联系方式</h2>
+            <div class="contact-container">
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="ri-phone-line"></i>
+                        <a href="tel:+86-400-123-4567">400-123-4567</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="ri-mail-line"></i>
+                        <a href="mailto:contact@aimodelcenter.com">contact@aimodelcenter.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="ri-map-pin-line"></i>
+                        <span>深圳市南山区科技园科技中路1号</span>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe 
+                        src="https://maps.google.com/maps?q=深圳市南山区科技园&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+                        frameborder="0" 
+                        scrolling="no" 
+                        marginheight="0" 
+                        marginwidth="0">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- 关注我们部分 -->
+        <section class="follow-us">
+            <h2>关注我们</h2>
+            <div class="qrcode-container">
+                <div id="qrcode"></div>
+                <p>扫描二维码，关注我们的公众号获取更多资讯</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="copyright">© 2025 模特素材中心官网。保留所有权利。</p>
+    </footer>
+
+    <script>
+        // 生成二维码
+        new QRCode(document.getElementById("qrcode"), {
+            text: "https://aimodelcenter.com/wechat",
+            width: 128,
+            height: 128,
+            colorDark : "#FFFFFF",
+            colorLight : "transparent",
+            correctLevel : QRCode.CorrectLevel.H
+        });
+
+        // 移动端菜单
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('show');
+        });
+    </script>
+</body>
+</html> 

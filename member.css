@@ -1,0 +1,339 @@
+/* 全局样式 */
+:root {
+  --primary-color: #e0b0ff;
+  --secondary-color: #2d2d2d;
+  --text-primary: #ffffff;
+  --text-secondary: #b3b3b3;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --success-color: #52c41a;
+  --warning-color: #faad14;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  color: var(--text-primary);
+  background-color: var(--secondary-color);
+  line-height: 1.6;
+  padding-top: 70px; /* 添加与导航栏高度相同的顶部内边距 */
+}
+
+/* 会员中心容器 */
+.member-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+/* 用户头像样式 */
+.user-avatar {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--card-bg);
+  border: 4px solid var(--primary-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  overflow: visible;
+  flex-shrink: 0;
+}
+
+.user-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.vip-badge {
+  position: absolute;
+  bottom: -10px;
+  right: -15px;
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  color: var(--text-primary);
+  padding: 0.25rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  border: 2px solid var(--secondary-color);
+}
+
+/* 用户信息卡片样式 */
+.user-info-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+}
+
+.user-details {
+  flex: 1;
+}
+
+.user-details h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.vip-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.vip-level {
+  color: #FFB800;
+  font-weight: 600;
+}
+
+.vip-expiry {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.account-stats {
+  display: flex;
+  gap: 3rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+/* 主要内容区域 */
+.member-content {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* 左侧导航 */
+.member-nav {
+  width: 240px;
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.5rem 0;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+}
+
+.nav-group {
+  margin-bottom: 1.5rem;
+}
+
+.nav-group h3 {
+  padding: 0 1.5rem;
+  margin: 0 0 0.5rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.nav-item i {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+}
+
+.nav-item:hover {
+  background: rgba(224, 176, 255, 0.1);
+  color: var(--primary-color);
+}
+
+.nav-item:hover i {
+  color: var(--primary-color);
+}
+
+.nav-item.active {
+  background: rgba(224, 176, 255, 0.15);
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.nav-item.active i {
+  color: var(--primary-color);
+}
+
+/* 右侧内容区域 */
+.content-area {
+  flex: 1;
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+}
+
+.content-section {
+  display: none;
+}
+
+.content-section.active {
+  display: block;
+}
+
+.content-section h2 {
+  margin: 0 0 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* 表单样式 */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+  width: 100%;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 1rem;
+  color: var(--text-primary);
+  transition: all 0.3s;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(224, 176, 255, 0.1);
+}
+
+input:disabled {
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text-secondary);
+  cursor: not-allowed;
+}
+
+/* 按钮样式 */
+.save-btn,
+.recharge-btn,
+.download-btn,
+.modify-btn,
+.verify-btn {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.save-btn:hover,
+.recharge-btn:hover,
+.download-btn:hover,
+.modify-btn:hover,
+.verify-btn:hover {
+  background: #fff;
+  transform: translateY(-1px);
+}
+
+/* 下载记录和收藏列表样式 */
+.download-item,
+.favorite-item {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid var(--border-color);
+}
+
+.download-info h4,
+.favorite-info h4 {
+  margin: 0 0 0.5rem;
+  color: var(--text-primary);
+}
+
+.download-info p,
+.favorite-info p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .member-container {
+    padding: 0 1rem;
+  }
+
+  .user-info-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .account-stats {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .member-content {
+    flex-direction: column;
+  }
+
+  .member-nav {
+    width: 100%;
+  }
+
+  .nav-item {
+    padding: 1rem 1.5rem;
+  }
+} 
